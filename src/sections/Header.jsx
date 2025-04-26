@@ -39,7 +39,7 @@ const Header = () => {
 
                 <li className='nav-logo'>
                   <LinkScroll
-                    to='hero' offset={-100}
+                    to='hero' offset={-250} spy smooth className={clsx('max-lg:hidden transition-transform duration-500 cursor-pointer')}
                   >
                     <img src="/images/xora.svg" width={160} height={55} alt="Logo" />
                   </LinkScroll>
@@ -51,6 +51,10 @@ const Header = () => {
                 </li>
               </ul>
             </nav>
+            <div className='lg:hidden block absolute top-1/2 left-0 w-[960px] h-[380px] translate-x-[-290px] -translate-y-1/2 rotate-90'>
+              <img src="/images/bg-outlines.svg" width={960} height={380} alt='outline' className='relative' />
+              <img src="/images/bg-outlines-fill.png" width={960} height={380} alt='outline' className='absolute inset-0 mix-blend-soft-light opacity-5' />
+            </div>
           </div>
         </div>
         <button className='lg:hidden z-2 size-10 border-2 border-s4/25 rounded-full flex jusstify-center items-center' onClick={() => setIsOpen((prevState) => !prevState)}>
