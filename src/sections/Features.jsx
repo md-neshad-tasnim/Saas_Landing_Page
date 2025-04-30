@@ -9,8 +9,8 @@ const Features = () => {
         <div className="container">
           <div className="relative flex">
             {features.map((feature) => (
-              <div key={id}>
-
+              <div key={feature.id}>
+                {feature.title}
               </div>
 
             ))}
