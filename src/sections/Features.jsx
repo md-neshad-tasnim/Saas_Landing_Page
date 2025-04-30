@@ -7,9 +7,9 @@ const Features = () => {
     <section>
       <Element name="features">
         <div className="container">
-          <div className="relative flex">
+          <div className="relative flex md:flex-wrap flex-nowrap border-2 border-s3 rounded-7xl md:overflow-hidden max-md:flex-col feature-after md:g7 max-md:border-none max-md:rounded-none max-md:gap-3">
             {features.map((feature) => (
-              <div key={feature.id}>
+              <div key={feature.id} className='relative z-2 '>
                 {feature.title}
               </div>
 
