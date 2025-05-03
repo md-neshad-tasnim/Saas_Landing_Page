@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import React from 'react'
 import { useState } from 'react'
 import { Element } from 'react-scroll'
+import { plans } from '../constants';
 
 const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
@@ -21,6 +22,22 @@ const Pricing = () => {
                 !monthly && "translate-x-full",
               )} />
             </div>
+            <div className="pricing-bg">
+              <img src="/images/bg-outlines.svg" alt="outline" width={960} height={380} className='relative z-2' />
+              <img src="/images/bg-outlines-fill.png" alt="outline" width={960} height={380} className='absolute inset-0 opacity-5 mix-blend-soft-light' />
+            </div>
+          </div>
+          {/* Pricing */}
+          <div className='scroll-hide relative z-2 -mt-12 flex items-start max-xl:gap-5 max-xl:overflow-auto max-xl:pt-6'>
+            {plans.map((plan, index) => (
+              <div key={plan.id} className='pricing-plan_first pricing-plan_last pricing-plan_odd pricing-plan_even relative border-2 p-7 max-xl:min-w-80  max-lg:rounded-3xl xl:w-[calc(33.33%+2px)]'>
+                {index === 1 && (
+                  <div className='g4 absolute h-330 left-0 right-0 top-0 z-1 rounded-tl-3xl rounded-tr-3xl' />
+                )}
+
+
+              </div>
+            ))}
           </div>
         </div>
       </Element>
